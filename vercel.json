@@ -1,8 +1,8 @@
 {
     "functions": {
-        "api/hngStageZeroTask25/*.php": { "runtime": "vercel-php-runtime@0.1.0" }
+        "api/**/*.php": { "runtime": "vercel-php-runtime@0.1.0" }
     },
     "routes": [
-        { "src": "/(.*)", "dest": "/hngStageZeroTask25/index.php" }
+        { "src": "/(.*)", "dest": "/api/index.php" }
     ]
 }
