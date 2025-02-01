@@ -1,6 +1,6 @@
 ---
 
-# DeerSAPI Documentation  
+# API Documentation  
 **Simple Public API for Developer Profile Information**  
 
 ## 📝 Project Description  
@@ -26,16 +26,48 @@ Key Features:
 2. Copy the following code:  
 ```php
 <?php
+try {
+    // Initialize default status
+    $statusCode = 200;
+    
+    // Configure environment
+    if (!date_default_timezone_set('UTC')) {
+        throw new Exception('Failed to set timezone');
+    }
+
+    // Generate timestamp
+    $currentDateTime = date('c');
+    if (!$currentDateTime) {
+        throw new Exception('Failed to generate timestamp');
+    }
+
+    // Build response
+    $response = [
+        'timestamp' => $currentDateTime,
+        'email' => 'kennybajomo@gmail.com',
+        'github' => 'https://github.com/d0bbl/hngStageZeroTask25'
+    ];
+
+} catch (Exception $e) {
+    // Set error status
+    $statusCode = 500;
+    $response = [
+        'status' => $statusCode,
+        'timestamp' => null,
+        'email' => null,
+        'github' => null,
+        'error' => $e->getMessage()
+    ];
+}
+
+// Set HTTP status code
+http_response_code($statusCode);
+
+// Send headers
 header('Content-Type: application/json');
 header('Access-Control-Allow-Origin: *');
-date_default_timezone_set('UTC');
 
-$response = [
-    'timestamp' => date('c'),
-    'email' => 'kennybajomo@gmail.com',
-    'github' => 'https://GitHub.com/d0bbl'
-];
-
+// Output JSON
 echo json_encode($response);
 ?>
 ```  

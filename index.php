@@ -41,7 +41,7 @@ try {
     $response = [
         'timestamp' => $currentDateTime,
         'email' => 'kennybajomo@gmail.com',
-        'github' => 'https://GitHub.com/d0bbl'
+        'github' => 'https://github.com/d0bbl/hngStageZeroTask25'
     ];
 
 } catch (Exception $e) {
