@@ -43,9 +43,9 @@ try {
 
     // Build response
     $response = [
-        'timestamp' => $currentDateTime,
+        'timestamp' => $current_datetime,
         'email' => 'kennybajomo@gmail.com',
-        'github' => 'https://github.com/d0bbl/hngStageZeroTask25'
+        'github_url' => 'https://github.com/d0bbl/hngStageZeroTask25'
     ];
 
 } catch (Exception $e) {
@@ -107,18 +107,18 @@ Host: deersapi.com
 #### Response Format  
 ```json
 {
-    "timestamp": "ISO 8601 datetime",
+    "current_datetime": "ISO 8601 datetime",
     "email": "string",
-    "github": "URL"
+    "github_url": "URL"
 }
 ```  
 
 #### Example Response  
 ```json
 {
-    "timestamp": "2023-09-20T18:23:45+00:00",
+    "current_datetime": "2023-09-20T18:23:45+00:00",
     "email": "kennybajomo@gmail.com",
-    "github": "https://GitHub.com/d0bbl"
+    "github_url": "https://GitHub.com/d0bbl"
 }
 ```  
 

@@ -39,9 +39,9 @@ try {
 
     // Build response
     $response = [
-        'timestamp' => $currentDateTime,
+        'current_datetime' => $currentDateTime,
         'email' => 'kennybajomo@gmail.com',
-        'github' => 'https://github.com/d0bbl/hngStageZeroTask25'
+        'github_url' => 'https://github.com/d0bbl/hng_stage_zero_task'
     ];
 
 } catch (Exception $e) {
@@ -49,9 +49,9 @@ try {
     $statusCode = 500;
     $response = [
         'status' => $statusCode,
-        'timestamp' => null,
+        'current_datetime' => null,
         'email' => null,
-        'github' => null,
+        'github_url' => null,
         'error' => $e->getMessage()
     ];
 }
