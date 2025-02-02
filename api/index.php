@@ -1,26 +1,3 @@
-//php
-// Set headers to allow public access and specify JSON content type
-header('Content-Type: application/json');
-header('Access-Control-Allow-Origin: *');  // Enable CORS for cross-domain access
-
-// Set default timezone (UTC is specified)
-date_default_timezone_set('UTC');
-
-// Get current datetime in ISO 8601 format
-$currentDateTime = date('c');
-
-// Create response array
-$response = [
-    'timestamp' => $currentDateTime,
-    'email' => 'kennybajomo@gmail.com',
-    'github' => 'https://github.com/d0bbl'
-];
-
-// Encode and output the JSON response
-//echo json_encode($response);
-
-
-
 <?php
 try {
     // Initialize default status
